@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSendAndReceivePipelines", "JsonSendAndReceivePipelines\JsonSendAndReceivePipelines.btproj", "{8745398B-6910-46F9-9B41-0059F6D8C82B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPipelineComponents", "JsonPipelineComponents\JsonPipelineComponents.csproj", "{116779AB-F313-470A-9AB3-12C10FB7CD56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPipelineComponentsTests", "JsonPipelineComponentsTests\JsonPipelineComponentsTests.csproj", "{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{9679B89F-6EE6-4585-8F96-00C7D96477C6}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Library\Winterdom.BizTalk.PipelineTesting.dll = Library\Winterdom.BizTalk.PipelineTesting.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8745398B-6910-46F9-9B41-0059F6D8C82B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{116779AB-F313-470A-9AB3-12C10FB7CD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116779AB-F313-470A-9AB3-12C10FB7CD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116779AB-F313-470A-9AB3-12C10FB7CD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116779AB-F313-470A-9AB3-12C10FB7CD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
