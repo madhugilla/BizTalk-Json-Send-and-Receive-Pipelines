@@ -1,0 +1,157 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="3a51969f-735f-414d-90ff-08238b330300" LowerBound="1.1" HigherBound="33.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PoMgmtOrchestration" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="938bd132-a6a9-41e1-9083-f04a2d03b19e" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="POMsgPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="1191c172-15e4-4f86-8bd8-c4ad1233aa30" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="89707b50-f05c-4ed3-aa72-82274971bf4d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.58">
+                    <om:Property Name="Ref" Value="JsonSendAndReceivePipelines.PurchaseOrder_xml" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e838bff5-25eb-446c-90d9-b046e4a99c7c" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.60" HigherBound="8.95">
+                    <om:Property Name="Ref" Value="JsonSendAndReceivePipelines.Invoice" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="645de59f-7bec-474d-8c61-6fc24fbcc068" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="32.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessPO" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="ace970e5-b25b-499e-9f85-9b508448b5f2" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="b6624296-82ce-4a6d-9c19-2677f2256d8e" ParentLink="ServiceBody_Statement" LowerBound="20.1" HigherBound="22.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="POMsg" />
+                    <om:Property Name="MessageName" Value="PoMsg" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceivePO" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="f569c458-2a5f-4ea7-9a91-7a1debd78b2a" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="28.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="437c6772-f7c7-4717-9d55-6d92297185ca" ParentLink="ComplexStatement_Statement" LowerBound="25.1" HigherBound="27.1">
+                        <om:Property Name="ClassName" Value="PoMgmtOrchestration.PoToInvoice" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="0916b2da-d960-40d6-817a-295c325f36d1" ParentLink="Transform_InputMessagePartRef" LowerBound="26.75" HigherBound="26.80">
+                            <om:Property Name="MessageRef" Value="PoMsg" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="28ea26b3-c1a2-44c7-b191-639502039691" ParentLink="Transform_OutputMessagePartRef" LowerBound="26.28" HigherBound="26.38">
+                            <om:Property Name="MessageRef" Value="InvoiceMsg" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="790dc1ce-4b0b-4e27-844a-a53cbe14de37" ParentLink="Construct_MessageRef" LowerBound="23.23" HigherBound="23.33">
+                        <om:Property Name="Ref" Value="InvoiceMsg" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="2ead0ea8-0f44-4b68-9280-d19c7fe016dc" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="30.1">
+                    <om:Property Name="PortName" Value="POMsg" />
+                    <om:Property Name="MessageName" Value="InvoiceMsg" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendInvoice" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="555b47df-0d0e-41a6-8810-043d92383c67" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PoMgmtOrchestration.POMsgPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="POMsg" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="791b122f-6104-4efb-b8ad-2a12f400f623" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a1e02f3a-ca50-4407-a4ed-541012bbbdb4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="JsonSendAndReceivePipelines.PurchaseOrder_xml" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PoMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="368224e3-0d80-4101-beef-2c35a45dd668" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="JsonSendAndReceivePipelines.Invoice" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InvoiceMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PoMgmtOrchestration
+{
+    public porttype POMsgPortType
+    {
+        requestresponse Operation_1
+        {
+            JsonSendAndReceivePipelines.PurchaseOrder_xml, JsonSendAndReceivePipelines.Invoice
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessPO
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements POMsgPortType POMsg;
+        message JsonSendAndReceivePipelines.PurchaseOrder_xml PoMsg;
+        message JsonSendAndReceivePipelines.Invoice InvoiceMsg;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b6624296-82ce-4a6d-9c19-2677f2256d8e")]
+            activate receive (POMsg.Operation_1, PoMsg);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f569c458-2a5f-4ea7-9a91-7a1debd78b2a")]
+            construct InvoiceMsg
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("437c6772-f7c7-4717-9d55-6d92297185ca")]
+                transform (InvoiceMsg) = PoMgmtOrchestration.PoToInvoice (PoMsg);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ead0ea8-0f44-4b68-9280-d19c7fe016dc")]
+            send (POMsg.Operation_1, InvoiceMsg);
+        }
+    }
+}
+

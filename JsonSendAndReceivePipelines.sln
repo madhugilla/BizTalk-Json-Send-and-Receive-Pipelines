@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{9679
 		Library\Winterdom.BizTalk.PipelineTesting.dll = Library\Winterdom.BizTalk.PipelineTesting.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoMgmtOrchestration", "PoMgmtOrchestration\PoMgmtOrchestration.btproj", "{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ABF8E3C-0ADF-4F78-9AAE-BC926B9DB44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D448406D-16F3-4C7F-97FF-B6A1E81FE0AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -57,6 +57,7 @@
     <Compile Include="JsonToXmlConverter.cs" />
     <Compile Include="PcHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Invoice.cs" />
     <Compile Include="Types\PurchaseOrder_xml.cs" />
     <Compile Include="XmlToJsonConverter.cs" />
   </ItemGroup>
