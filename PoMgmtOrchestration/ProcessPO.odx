@@ -52,12 +52,12 @@
                 </om:Element>
                 <om:Element Type="Construct" OID="f569c458-2a5f-4ea7-9a91-7a1debd78b2a" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="28.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
-                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Name" Value="ConstructInvoice" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="Transform" OID="437c6772-f7c7-4717-9d55-6d92297185ca" ParentLink="ComplexStatement_Statement" LowerBound="25.1" HigherBound="27.1">
                         <om:Property Name="ClassName" Value="PoMgmtOrchestration.PoToInvoice" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
-                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Name" Value="PoToInvoice" />
                         <om:Property Name="Signal" Value="True" />
                         <om:Element Type="MessagePartRef" OID="0916b2da-d960-40d6-817a-295c325f36d1" ParentLink="Transform_InputMessagePartRef" LowerBound="26.75" HigherBound="26.80">
                             <om:Property Name="MessageRef" Value="PoMsg" />
